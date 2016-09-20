@@ -22,7 +22,7 @@ from .constants import E
 
 
 def parse(doc, treebuilder="etree", encoding=None,
-          namespaceHTMLElements=True):
+          namespaceHTMLElements=True, **kwargs):
     """Parse a string or file-like object into a tree"""
     tb = treebuilders.getTreeBuilder(treebuilder)
     p = HTMLParser(tb, namespaceHTMLElements=namespaceHTMLElements)
